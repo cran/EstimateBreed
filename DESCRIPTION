@@ -1,8 +1,8 @@
 Package: EstimateBreed
 Type: Package
 Title: Estimation of Environmental Variables and Genetic Parameters
-Version: 1.0.0
-Date: 2025-03-16
+Version: 1.0.1
+Date: 2025-04-17
 Authors@R: 
   c(person("Willyan Junior Adorian","Bandeira",
            role = c("aut", "cre"),
@@ -60,7 +60,7 @@ LazyLoad: true
 Language: en-US
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-03-20 12:40:34 UTC; willy
+Packaged: 2025-04-17 18:00:12 UTC; willy
 Author: Willyan Junior Adorian Bandeira [aut, cre]
     (<https://orcid.org/0000-0002-9430-3664>),
   Ivan Ricardo Carvalho [aut, ctb]
@@ -71,4 +71,4 @@ Author: Willyan Junior Adorian Bandeira [aut, cre]
   Jose Antonio Gonzalez da Silva [aut, ctb]
     (<https://orcid.org/0000-0002-9335-2421>)
 Repository: CRAN
-Date/Publication: 2025-03-22 11:50:14 UTC
+Date/Publication: 2025-04-17 18:40:06 UTC

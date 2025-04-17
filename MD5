@@ -1,6 +1,6 @@
-d6a2cae90adf7a85fdc4e446b1590542 *DESCRIPTION
+dcbba925d920dd20888999cd3dece236 *DESCRIPTION
 4d80e47a8d8266b866371e19e41d20e9 *NAMESPACE
-fa1bb5ce1c16d06a94752399daded392 *NEWS.md
+077002088742187e4f74238e4d983d31 *NEWS.md
 04d8636e5ce57869c27c679e0946feb7 *R/ambiental.R
 0545ad0f6e5e4b1b71481e085cbfcff6 *R/estresse.R
 3cbb53ab361e84bb898ced1784e42fb7 *R/heterose.R
@@ -13,8 +13,8 @@ e9974b236ed4fb0f6bfa84b396992f6a *R/risco.R
 834677fbce0f37e3d4dab22f16a480a4 *R/selecao.R
 9cb4af8590f4bc726f87790bded7f329 *R/zzz.R
 ad25bf281be502a3cd43a13ddab1db1c *README.md
-1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
-bd2315971ab7dc78f00d70e0b679c135 *build/vignette.rds
+cb3b20077bebc5da31fc1b46c657c0ff *build/partial.rdb
+8f7e20635e4c22943225457761b62018 *build/vignette.rds
 80fa4a99fba8d3996922e8173a17f3ef *data/aveia.rda
 ff4462b82066fa9d38cb1e194dedb1dc *data/clima.rda
 daaa5e91e295fd12d4c5e05563c136c3 *data/coefend.rda
@@ -30,12 +30,12 @@ df2e3855758a593a78954ba799f64499 *data/ptn.rda
 f684388c0425f8b614370c19432fc178 *data/termaldata.rda
 bc0b84e66a477062d5dde950faa9ce9c *data/trigo.rda
 7c5d864239bb611b16f5d7e3b52fc0b7 *data/vig.rda
-d2d92b244136fa2eb70e4947c747deff *inst/doc/EnvironmentalAnalysis.R
-eed65951f53571941ae448cf113dd12a *inst/doc/EnvironmentalAnalysis.Rmd
-1fce5d65980476833db245a711a78938 *inst/doc/EnvironmentalAnalysis.html
+a0d7ff45490aa338711b7cf1d73fbb86 *inst/doc/EnvironmentalAnalysis.R
+743929ef2ac8114fcab6a449b091bedb *inst/doc/EnvironmentalAnalysis.Rmd
+4737a79ebf26302ae73019f6a73872cf *inst/doc/EnvironmentalAnalysis.html
 2bd73bd89038ab61a22ab6f30fd62790 *inst/doc/SelectionAnalysis.R
 8701fa411b7c0ef8792950de3f3ed9cd *inst/doc/SelectionAnalysis.Rmd
-91af4813b0d7c9ee32ea7de28c51faf0 *inst/doc/SelectionAnalysis.html
+0b101cd2aa489025aa4c0216fbd2b702 *inst/doc/SelectionAnalysis.html
 2dae551c2741a244f70d51241fdc34df *inst/docs/EnvironmentalAnalysis.R
 c32c59927907abdb15320a0ef8ab43f4 *inst/docs/EnvironmentalAnalysis.Rmd
 2dae551c2741a244f70d51241fdc34df *inst/docs/SelectionAnalysis.R
@@ -83,5 +83,5 @@ ff66dc13fe3eefd106eed436c513e380 *man/tdelta.Rd
 17e5a4c69c949118d3cab5fa079992f3 *man/transg.Rd
 a7f4fed1484baec1af7d4aa51e891525 *man/trigo.Rd
 cd43f23137fd987540c5ae36a657e739 *man/vig.Rd
-eed65951f53571941ae448cf113dd12a *vignettes/EnvironmentalAnalysis.Rmd
+743929ef2ac8114fcab6a449b091bedb *vignettes/EnvironmentalAnalysis.Rmd
 8701fa411b7c0ef8792950de3f3ed9cd *vignettes/SelectionAnalysis.Rmd

@@ -12,7 +12,7 @@
 
 <meta name="author" content="Willyan Junior Adorian Bandeira" />
 
-<meta name="date" content="2025-03-20" />
+<meta name="date" content="2025-04-17" />
 
 <title>EnvironmentalAnalysis</title>
 
@@ -340,7 +340,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">EnvironmentalAnalysis</h1>
 <h4 class="author">Willyan Junior Adorian Bandeira</h4>
-<h4 class="date">2025-03-20</h4>
+<h4 class="date">2025-04-17</h4>
 
 
 
@@ -385,287 +385,18 @@ pesticides.</p>
 crucial for agrochemical application. The <code>tdelta()</code> function
 performs forecasting or retrospective analysis of climate data to
 understand the best time for application.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(EstimateBreed)</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co"># Forecasting application conditions</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>forecast <span class="ot">&lt;-</span> <span class="fu">tdelta</span>(<span class="sc">-</span><span class="fl">53.6969</span>,<span class="sc">-</span><span class="fl">28.0638</span>,<span class="at">type=</span><span class="dv">1</span>,<span class="at">days=</span><span class="dv">10</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>forecast</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt;            Day  Hour Temp  RH WindS Prec     DELTAT</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; 1   2025-03-19 21:00 19.2  64   8.9  0.0  6.9800393</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; 2   2025-03-19 22:00 18.5  64   8.5  0.0  6.9425667</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt; 3   2025-03-19 23:00 17.9  65   7.3  0.0  6.6767223</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt; 4   2025-03-20 00:00 17.3  68   6.9  0.0  5.9660194</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt; 5   2025-03-20 01:00 16.2  73   5.8  0.0  4.8477829</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt; 6   2025-03-20 02:00 15.5  77   5.8  0.0  4.0170528</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt; 7   2025-03-20 03:00 15.0  79   5.4  0.0  3.6143743</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; 8   2025-03-20 04:00 14.7  81   5.8  0.0  3.2283040</span></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; 9   2025-03-20 05:00 17.9  71   6.5  0.0  5.3368443</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt; 10  2025-03-20 06:00 21.3  58  12.2  0.0  8.6056142</span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt; 11  2025-03-20 07:00 24.6  50  11.9  0.0 11.1244757</span></span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt; 12  2025-03-20 08:00 27.3  41   9.7  0.0 14.4223437</span></span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt; 13  2025-03-20 09:00 29.2  34   5.2  0.0 17.4936107</span></span>
-<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="co">#&gt; 14  2025-03-20 10:00 30.3  30   1.5  0.0 19.5300696</span></span>
-<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="co">#&gt; 15  2025-03-20 11:00 30.6  28   0.8  0.0 20.6076487</span></span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="co">#&gt; 16  2025-03-20 12:00 31.1  28   3.2  0.0 20.6815682</span></span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a><span class="co">#&gt; 17  2025-03-20 13:00 31.0  28   6.6  0.0 20.6667745</span></span>
-<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a><span class="co">#&gt; 18  2025-03-20 14:00 30.4  28   9.0  0.0 20.5781151</span></span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="co">#&gt; 19  2025-03-20 15:00 28.9  30  10.0  0.0 19.3339171</span></span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="co">#&gt; 20  2025-03-20 16:00 26.2  37   9.2  0.0 15.8542689</span></span>
-<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a><span class="co">#&gt; 21  2025-03-20 17:00 24.3  40   8.2  0.0 14.4754271</span></span>
-<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="co">#&gt; 22  2025-03-20 18:00 22.9  41   7.3  0.0 13.9600039</span></span>
-<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a><span class="co">#&gt; 23  2025-03-20 19:00 21.5  47   7.9  0.0 11.7945839</span></span>
-<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a><span class="co">#&gt; 24  2025-03-20 20:00 20.8  53   8.0  0.0  9.9372351</span></span>
-<span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a><span class="co">#&gt; 25  2025-03-20 21:00 20.5  56   8.7  0.0  9.0850349</span></span>
-<span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a><span class="co">#&gt; 26  2025-03-20 22:00 20.0  58   8.3  0.0  8.5208637</span></span>
-<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a><span class="co">#&gt; 27  2025-03-20 23:00 19.5  60   8.4  0.0  7.9764776</span></span>
-<span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a><span class="co">#&gt; 28  2025-03-21 00:00 18.8  63   7.8  0.0  7.1972764</span></span>
-<span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a><span class="co">#&gt; 29  2025-03-21 01:00 18.1  66   7.1  0.0  6.4560231</span></span>
-<span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a><span class="co">#&gt; 30  2025-03-21 02:00 17.4  69   6.3  0.0  5.7497272</span></span>
-<span id="cb3-37"><a href="#cb3-37" tabindex="-1"></a><span class="co">#&gt; 31  2025-03-21 03:00 16.7  72   6.0  0.0  5.0757573</span></span>
-<span id="cb3-38"><a href="#cb3-38" tabindex="-1"></a><span class="co">#&gt; 32  2025-03-21 04:00 16.4  73   5.8  0.0  4.8553502</span></span>
-<span id="cb3-39"><a href="#cb3-39" tabindex="-1"></a><span class="co">#&gt; 33  2025-03-21 05:00 19.4  66   5.7  0.0  6.5209736</span></span>
-<span id="cb3-40"><a href="#cb3-40" tabindex="-1"></a><span class="co">#&gt; 34  2025-03-21 06:00 24.1  47   8.9  0.0 12.0269008</span></span>
-<span id="cb3-41"><a href="#cb3-41" tabindex="-1"></a><span class="co">#&gt; 35  2025-03-21 07:00 27.4  39  12.1  0.0 15.1960831</span></span>
-<span id="cb3-42"><a href="#cb3-42" tabindex="-1"></a><span class="co">#&gt; 36  2025-03-21 08:00 29.5  34  11.7  0.0 17.5316674</span></span>
-<span id="cb3-43"><a href="#cb3-43" tabindex="-1"></a><span class="co">#&gt; 37  2025-03-21 09:00 31.0  29  10.8  0.0 20.1397635</span></span>
-<span id="cb3-44"><a href="#cb3-44" tabindex="-1"></a><span class="co">#&gt; 38  2025-03-21 10:00 31.4  28  11.7  0.0 20.7259784</span></span>
-<span id="cb3-45"><a href="#cb3-45" tabindex="-1"></a><span class="co">#&gt; 39  2025-03-21 11:00 31.5  28  11.0  0.0 20.7407916</span></span>
-<span id="cb3-46"><a href="#cb3-46" tabindex="-1"></a><span class="co">#&gt; 40  2025-03-21 12:00 31.7  27   9.0  0.0 21.3168740</span></span>
-<span id="cb3-47"><a href="#cb3-47" tabindex="-1"></a><span class="co">#&gt; 41  2025-03-21 13:00 31.5  28   7.2  0.0 20.7407916</span></span>
-<span id="cb3-48"><a href="#cb3-48" tabindex="-1"></a><span class="co">#&gt; 42  2025-03-21 14:00 31.0  29   5.9  0.0 20.1397635</span></span>
-<span id="cb3-49"><a href="#cb3-49" tabindex="-1"></a><span class="co">#&gt; 43  2025-03-21 15:00 29.7  32   5.4  0.0 18.4755241</span></span>
-<span id="cb3-50"><a href="#cb3-50" tabindex="-1"></a><span class="co">#&gt; 44  2025-03-21 16:00 26.5  43   3.5  0.0 13.6113064</span></span>
-<span id="cb3-51"><a href="#cb3-51" tabindex="-1"></a><span class="co">#&gt; 45  2025-03-21 17:00 25.7  49   1.8  0.0 11.5285780</span></span>
-<span id="cb3-52"><a href="#cb3-52" tabindex="-1"></a><span class="co">#&gt; 46  2025-03-21 18:00 23.4  52   4.5  0.0 10.4261346</span></span>
-<span id="cb3-53"><a href="#cb3-53" tabindex="-1"></a><span class="co">#&gt; 47  2025-03-21 19:00 21.7  59   4.6  0.0  8.3696337</span></span>
-<span id="cb3-54"><a href="#cb3-54" tabindex="-1"></a><span class="co">#&gt; 48  2025-03-21 20:00 20.8  60   4.6  0.0  8.0560517</span></span>
-<span id="cb3-55"><a href="#cb3-55" tabindex="-1"></a><span class="co">#&gt; 49  2025-03-21 21:00 20.2  61   4.6  0.0  7.7676052</span></span>
-<span id="cb3-56"><a href="#cb3-56" tabindex="-1"></a><span class="co">#&gt; 50  2025-03-21 22:00 19.3  62   5.0  0.0  7.4678992</span></span>
-<span id="cb3-57"><a href="#cb3-57" tabindex="-1"></a><span class="co">#&gt; 51  2025-03-21 23:00 18.5  62   5.6  0.0  7.4221502</span></span>
-<span id="cb3-58"><a href="#cb3-58" tabindex="-1"></a><span class="co">#&gt; 52  2025-03-22 00:00 19.0  59   6.2  0.0  8.1990611</span></span>
-<span id="cb3-59"><a href="#cb3-59" tabindex="-1"></a><span class="co">#&gt; 53  2025-03-22 01:00 19.6  56   5.8  0.0  9.0229171</span></span>
-<span id="cb3-60"><a href="#cb3-60" tabindex="-1"></a><span class="co">#&gt; 54  2025-03-22 02:00 20.0  56   6.6  0.0  9.0504996</span></span>
-<span id="cb3-61"><a href="#cb3-61" tabindex="-1"></a><span class="co">#&gt; 55  2025-03-22 03:00 20.6  53   8.2  0.0  9.9221594</span></span>
-<span id="cb3-62"><a href="#cb3-62" tabindex="-1"></a><span class="co">#&gt; 56  2025-03-22 04:00 21.6  50   8.9  0.0 10.8767392</span></span>
-<span id="cb3-63"><a href="#cb3-63" tabindex="-1"></a><span class="co">#&gt; 57  2025-03-22 05:00 23.0  48  12.9  0.0 11.6105468</span></span>
-<span id="cb3-64"><a href="#cb3-64" tabindex="-1"></a><span class="co">#&gt; 58  2025-03-22 06:00 25.1  44  17.1  0.0 13.1224867</span></span>
-<span id="cb3-65"><a href="#cb3-65" tabindex="-1"></a><span class="co">#&gt; 59  2025-03-22 07:00 27.0  39  18.3  0.0 15.1515705</span></span>
-<span id="cb3-66"><a href="#cb3-66" tabindex="-1"></a><span class="co">#&gt; 60  2025-03-22 08:00 28.5  35  17.3  0.0 16.9671002</span></span>
-<span id="cb3-67"><a href="#cb3-67" tabindex="-1"></a><span class="co">#&gt; 61  2025-03-22 09:00 29.9  32  15.9  0.0 18.5022156</span></span>
-<span id="cb3-68"><a href="#cb3-68" tabindex="-1"></a><span class="co">#&gt; 62  2025-03-22 10:00 30.5  29  13.9  0.0 20.0676795</span></span>
-<span id="cb3-69"><a href="#cb3-69" tabindex="-1"></a><span class="co">#&gt; 63  2025-03-22 11:00 30.3  29  13.3  0.0 20.0388794</span></span>
-<span id="cb3-70"><a href="#cb3-70" tabindex="-1"></a><span class="co">#&gt; 64  2025-03-22 12:00 30.8  28  12.1  0.0 20.6372019</span></span>
-<span id="cb3-71"><a href="#cb3-71" tabindex="-1"></a><span class="co">#&gt; 65  2025-03-22 13:00 31.1  27   8.6  0.0 21.2257677</span></span>
-<span id="cb3-72"><a href="#cb3-72" tabindex="-1"></a><span class="co">#&gt; 66  2025-03-22 14:00 30.8  27   5.7  0.0 21.1802818</span></span>
-<span id="cb3-73"><a href="#cb3-73" tabindex="-1"></a><span class="co">#&gt; 67  2025-03-22 15:00 29.4  30   5.0  0.0 19.4038663</span></span>
-<span id="cb3-74"><a href="#cb3-74" tabindex="-1"></a><span class="co">#&gt; 68  2025-03-22 16:00 26.5  40   3.3  0.0 14.7127208</span></span>
-<span id="cb3-75"><a href="#cb3-75" tabindex="-1"></a><span class="co">#&gt; 69  2025-03-22 17:00 24.9  48   2.3  0.0 11.7765780</span></span>
-<span id="cb3-76"><a href="#cb3-76" tabindex="-1"></a><span class="co">#&gt; 70  2025-03-22 18:00 24.1  48   3.6  0.0 11.7065329</span></span>
-<span id="cb3-77"><a href="#cb3-77" tabindex="-1"></a><span class="co">#&gt; 71  2025-03-22 19:00 22.0  53   4.3  0.0 10.0279203</span></span>
-<span id="cb3-78"><a href="#cb3-78" tabindex="-1"></a><span class="co">#&gt; 72  2025-03-22 20:00 20.5  59   4.5  0.0  8.2936138</span></span>
-<span id="cb3-79"><a href="#cb3-79" tabindex="-1"></a><span class="co">#&gt; 73  2025-03-22 21:00 20.0  61   3.8  0.0  7.7557435</span></span>
-<span id="cb3-80"><a href="#cb3-80" tabindex="-1"></a><span class="co">#&gt; 74  2025-03-22 22:00 20.7  58   3.0  0.0  8.5664482</span></span>
-<span id="cb3-81"><a href="#cb3-81" tabindex="-1"></a><span class="co">#&gt; 75  2025-03-22 23:00 20.8  57   3.1  0.0  8.8373254</span></span>
-<span id="cb3-82"><a href="#cb3-82" tabindex="-1"></a><span class="co">#&gt; 76  2025-03-23 00:00 20.3  59   4.3  0.0  8.2809765</span></span>
-<span id="cb3-83"><a href="#cb3-83" tabindex="-1"></a><span class="co">#&gt; 77  2025-03-23 01:00 19.6  62   4.6  0.0  7.4850903</span></span>
-<span id="cb3-84"><a href="#cb3-84" tabindex="-1"></a><span class="co">#&gt; 78  2025-03-23 02:00 19.1  63   4.9  0.0  7.2138852</span></span>
-<span id="cb3-85"><a href="#cb3-85" tabindex="-1"></a><span class="co">#&gt; 79  2025-03-23 03:00 18.9  63   5.3  0.0  7.2028106</span></span>
-<span id="cb3-86"><a href="#cb3-86" tabindex="-1"></a><span class="co">#&gt; 80  2025-03-23 04:00 19.5  57   6.3  0.0  8.7501673</span></span>
-<span id="cb3-87"><a href="#cb3-87" tabindex="-1"></a><span class="co">#&gt; 81  2025-03-23 05:00 22.0  53   6.3  0.0 10.0279203</span></span>
-<span id="cb3-88"><a href="#cb3-88" tabindex="-1"></a><span class="co">#&gt; 82  2025-03-23 06:00 25.4  47  11.4  0.0 12.1438692</span></span>
-<span id="cb3-89"><a href="#cb3-89" tabindex="-1"></a><span class="co">#&gt; 83  2025-03-23 07:00 27.5  42  13.0  0.0 14.0738742</span></span>
-<span id="cb3-90"><a href="#cb3-90" tabindex="-1"></a><span class="co">#&gt; 84  2025-03-23 08:00 29.5  37  14.9  0.0 16.2410539</span></span>
-<span id="cb3-91"><a href="#cb3-91" tabindex="-1"></a><span class="co">#&gt; 85  2025-03-23 09:00 30.9  34  16.2  0.0 17.7097755</span></span>
-<span id="cb3-92"><a href="#cb3-92" tabindex="-1"></a><span class="co">#&gt; 86  2025-03-23 10:00 31.2  33  16.9  0.0 18.2059254</span></span>
-<span id="cb3-93"><a href="#cb3-93" tabindex="-1"></a><span class="co">#&gt; 87  2025-03-23 11:00 30.8  35  17.3  0.0 17.2520615</span></span>
-<span id="cb3-94"><a href="#cb3-94" tabindex="-1"></a><span class="co">#&gt; 88  2025-03-23 12:00 30.3  37  16.7  0.0 16.3354786</span></span>
-<span id="cb3-95"><a href="#cb3-95" tabindex="-1"></a><span class="co">#&gt; 89  2025-03-23 13:00 29.7  41  14.3  0.0 14.6775271</span></span>
-<span id="cb3-96"><a href="#cb3-96" tabindex="-1"></a><span class="co">#&gt; 90  2025-03-23 14:00 28.8  45  10.7  0.0 13.1341761</span></span>
-<span id="cb3-97"><a href="#cb3-97" tabindex="-1"></a><span class="co">#&gt; 91  2025-03-23 15:00 27.9  50   8.2  0.0 11.4000680</span></span>
-<span id="cb3-98"><a href="#cb3-98" tabindex="-1"></a><span class="co">#&gt; 92  2025-03-23 16:00 26.7  55   7.7  0.0  9.8033695</span></span>
-<span id="cb3-99"><a href="#cb3-99" tabindex="-1"></a><span class="co">#&gt; 93  2025-03-23 17:00 25.3  59   8.1  0.0  8.5997055</span></span>
-<span id="cb3-100"><a href="#cb3-100" tabindex="-1"></a><span class="co">#&gt; 94  2025-03-23 18:00 24.0  65   8.4  0.0  6.9948499</span></span>
-<span id="cb3-101"><a href="#cb3-101" tabindex="-1"></a><span class="co">#&gt; 95  2025-03-23 19:00 23.0  72   7.6  0.6  5.3276314</span></span>
-<span id="cb3-102"><a href="#cb3-102" tabindex="-1"></a><span class="co">#&gt; 96  2025-03-23 20:00 22.1  81   5.8  0.6  3.4190951</span></span>
-<span id="cb3-103"><a href="#cb3-103" tabindex="-1"></a><span class="co">#&gt; 97  2025-03-23 21:00 21.4  87   4.5  0.6  2.2575920</span></span>
-<span id="cb3-104"><a href="#cb3-104" tabindex="-1"></a><span class="co">#&gt; 98  2025-03-23 22:00 20.9  90   3.3  1.5  1.7050630</span></span>
-<span id="cb3-105"><a href="#cb3-105" tabindex="-1"></a><span class="co">#&gt; 99  2025-03-23 23:00 20.5  90   3.4  1.5  1.6998097</span></span>
-<span id="cb3-106"><a href="#cb3-106" tabindex="-1"></a><span class="co">#&gt; 100 2025-03-24 00:00 20.2  91   4.4  1.5  1.5190652</span></span>
-<span id="cb3-107"><a href="#cb3-107" tabindex="-1"></a><span class="co">#&gt; 101 2025-03-24 01:00 19.8  93   4.7  0.0  1.1668680</span></span>
-<span id="cb3-108"><a href="#cb3-108" tabindex="-1"></a><span class="co">#&gt; 102 2025-03-24 02:00 19.4  95   4.8  0.0  0.8232852</span></span>
-<span id="cb3-109"><a href="#cb3-109" tabindex="-1"></a><span class="co">#&gt; 103 2025-03-24 03:00 19.4  95   4.8  0.0  0.8232852</span></span>
-<span id="cb3-110"><a href="#cb3-110" tabindex="-1"></a><span class="co">#&gt; 104 2025-03-24 04:00 19.9  93   5.2  0.0  1.1677724</span></span>
-<span id="cb3-111"><a href="#cb3-111" tabindex="-1"></a><span class="co">#&gt; 105 2025-03-24 05:00 20.9  89   6.4  0.0  1.8845643</span></span>
-<span id="cb3-112"><a href="#cb3-112" tabindex="-1"></a><span class="co">#&gt; 106 2025-03-24 06:00 22.0  84   7.2  0.0  2.8332746</span></span>
-<span id="cb3-113"><a href="#cb3-113" tabindex="-1"></a><span class="co">#&gt; 107 2025-03-24 07:00 23.5  77   9.4  0.0  4.2727633</span></span>
-<span id="cb3-114"><a href="#cb3-114" tabindex="-1"></a><span class="co">#&gt; 108 2025-03-24 08:00 25.0  68  13.0  0.0  6.3272900</span></span>
-<span id="cb3-115"><a href="#cb3-115" tabindex="-1"></a><span class="co">#&gt; 109 2025-03-24 09:00 26.2  62  15.5  0.0  7.8681440</span></span>
-<span id="cb3-116"><a href="#cb3-116" tabindex="-1"></a><span class="co">#&gt; 110 2025-03-24 10:00 26.7  60  15.3  0.0  8.4220002</span></span>
-<span id="cb3-117"><a href="#cb3-117" tabindex="-1"></a><span class="co">#&gt; 111 2025-03-24 11:00 26.8  60  14.4  0.0  8.4282705</span></span>
-<span id="cb3-118"><a href="#cb3-118" tabindex="-1"></a><span class="co">#&gt; 112 2025-03-24 12:00 26.6  62  13.7  0.0  7.8916573</span></span>
-<span id="cb3-119"><a href="#cb3-119" tabindex="-1"></a><span class="co">#&gt; 113 2025-03-24 13:00 26.0  64  13.2  0.1  7.3491598</span></span>
-<span id="cb3-120"><a href="#cb3-120" tabindex="-1"></a><span class="co">#&gt; 114 2025-03-24 14:00 25.1  68  12.0  0.1  6.3320500</span></span>
-<span id="cb3-121"><a href="#cb3-121" tabindex="-1"></a><span class="co">#&gt; 115 2025-03-24 15:00 24.2  72  10.1  0.1  5.3762846</span></span>
-<span id="cb3-122"><a href="#cb3-122" tabindex="-1"></a><span class="co">#&gt; 116 2025-03-24 16:00 23.3  77   7.7  0.0  4.2662760</span></span>
-<span id="cb3-123"><a href="#cb3-123" tabindex="-1"></a><span class="co">#&gt; 117 2025-03-24 17:00 22.4  82   5.1  0.0  3.2298741</span></span>
-<span id="cb3-124"><a href="#cb3-124" tabindex="-1"></a><span class="co">#&gt; 118 2025-03-24 18:00 21.7  86   4.6  0.0  2.4488729</span></span>
-<span id="cb3-125"><a href="#cb3-125" tabindex="-1"></a><span class="co">#&gt; 119 2025-03-24 19:00 21.3  88   4.7  0.3  2.0722091</span></span>
-<span id="cb3-126"><a href="#cb3-126" tabindex="-1"></a><span class="co">#&gt; 120 2025-03-24 20:00 21.0  88   4.4  0.3  2.0674305</span></span>
-<span id="cb3-127"><a href="#cb3-127" tabindex="-1"></a><span class="co">#&gt; 121 2025-03-24 21:00 20.8  89   4.1  0.3  1.8831123</span></span>
-<span id="cb3-128"><a href="#cb3-128" tabindex="-1"></a><span class="co">#&gt; 122 2025-03-24 22:00 20.6  90   3.5  0.0  1.7011223</span></span>
-<span id="cb3-129"><a href="#cb3-129" tabindex="-1"></a><span class="co">#&gt; 123 2025-03-24 23:00 20.4  91   2.8  0.0  1.5214152</span></span>
-<span id="cb3-130"><a href="#cb3-130" tabindex="-1"></a><span class="co">#&gt; 124 2025-03-25 00:00 20.3  91   2.3  0.0  1.5202400</span></span>
-<span id="cb3-131"><a href="#cb3-131" tabindex="-1"></a><span class="co">#&gt; 125 2025-03-25 01:00 19.1  96   2.9  0.0  0.6541165</span></span>
-<span id="cb3-132"><a href="#cb3-132" tabindex="-1"></a><span class="co">#&gt; 126 2025-03-25 02:00 18.5  98   3.1  0.0  0.3226258</span></span>
-<span id="cb3-133"><a href="#cb3-133" tabindex="-1"></a><span class="co">#&gt; 127 2025-03-25 03:00 18.7  97   3.1  0.0  0.4868640</span></span>
-<span id="cb3-134"><a href="#cb3-134" tabindex="-1"></a><span class="co">#&gt; 128 2025-03-25 04:00 20.3  90   3.3  0.0  1.6971860</span></span>
-<span id="cb3-135"><a href="#cb3-135" tabindex="-1"></a><span class="co">#&gt; 129 2025-03-25 05:00 22.8  79   3.5  0.0  3.8392501</span></span>
-<span id="cb3-136"><a href="#cb3-136" tabindex="-1"></a><span class="co">#&gt; 130 2025-03-25 06:00 24.8  70   3.6  0.0  5.8535015</span></span>
-<span id="cb3-137"><a href="#cb3-137" tabindex="-1"></a><span class="co">#&gt; 131 2025-03-25 07:00 26.1  65   5.4  0.2  7.1060360</span></span>
-<span id="cb3-138"><a href="#cb3-138" tabindex="-1"></a><span class="co">#&gt; 132 2025-03-25 08:00 26.9  61   8.9  0.2  8.1700451</span></span>
-<span id="cb3-139"><a href="#cb3-139" tabindex="-1"></a><span class="co">#&gt; 133 2025-03-25 09:00 27.5  59  11.6  0.2  8.7417895</span></span>
-<span id="cb3-140"><a href="#cb3-140" tabindex="-1"></a><span class="co">#&gt; 134 2025-03-25 10:00 28.0  57  12.3  0.2  9.3275915</span></span>
-<span id="cb3-141"><a href="#cb3-141" tabindex="-1"></a><span class="co">#&gt; 135 2025-03-25 11:00 28.3  55  12.3  0.2  9.9201517</span></span>
-<span id="cb3-142"><a href="#cb3-142" tabindex="-1"></a><span class="co">#&gt; 136 2025-03-25 12:00 28.2  56  11.7  0.2  9.6248801</span></span>
-<span id="cb3-143"><a href="#cb3-143" tabindex="-1"></a><span class="co">#&gt; 137 2025-03-25 13:00 27.6  60   9.8  0.3  8.4785143</span></span>
-<span id="cb3-144"><a href="#cb3-144" tabindex="-1"></a><span class="co">#&gt; 138 2025-03-25 14:00 26.6  65   7.6  0.3  7.1326345</span></span>
-<span id="cb3-145"><a href="#cb3-145" tabindex="-1"></a><span class="co">#&gt; 139 2025-03-25 15:00 25.6  71   5.8  0.3  5.6596746</span></span>
-<span id="cb3-146"><a href="#cb3-146" tabindex="-1"></a><span class="co">#&gt; 140 2025-03-25 16:00 24.4  76   5.1  0.2  4.5134752</span></span>
-<span id="cb3-147"><a href="#cb3-147" tabindex="-1"></a><span class="co">#&gt; 141 2025-03-25 17:00 23.2  82   5.1  0.2  3.2496490</span></span>
-<span id="cb3-148"><a href="#cb3-148" tabindex="-1"></a><span class="co">#&gt; 142 2025-03-25 18:00 22.1  86   5.8  0.2  2.4563953</span></span>
-<span id="cb3-149"><a href="#cb3-149" tabindex="-1"></a><span class="co">#&gt; 143 2025-03-25 19:00 21.3  89   5.2  0.0  1.8903775</span></span>
-<span id="cb3-150"><a href="#cb3-150" tabindex="-1"></a><span class="co">#&gt; 144 2025-03-25 20:00 20.7  90   4.0  0.0  1.7024353</span></span>
-<span id="cb3-151"><a href="#cb3-151" tabindex="-1"></a><span class="co">#&gt; 145 2025-03-25 21:00 20.1  92   3.1  0.0  1.3429084</span></span>
-<span id="cb3-152"><a href="#cb3-152" tabindex="-1"></a><span class="co">#&gt; 146 2025-03-25 22:00 19.6  94   2.7  0.0  0.9940198</span></span>
-<span id="cb3-153"><a href="#cb3-153" tabindex="-1"></a><span class="co">#&gt; 147 2025-03-25 23:00 19.1  96   2.5  0.0  0.6541165</span></span>
-<span id="cb3-154"><a href="#cb3-154" tabindex="-1"></a><span class="co">#&gt; 148 2025-03-26 00:00 18.7  98   2.5  0.0  0.3231294</span></span>
-<span id="cb3-155"><a href="#cb3-155" tabindex="-1"></a><span class="co">#&gt; 149 2025-03-26 01:00 18.3  99   2.6  0.0  0.1603492</span></span>
-<span id="cb3-156"><a href="#cb3-156" tabindex="-1"></a><span class="co">#&gt; 150 2025-03-26 02:00 17.9 100   2.4  0.0  0.0000000</span></span>
-<span id="cb3-157"><a href="#cb3-157" tabindex="-1"></a><span class="co">#&gt; 151 2025-03-26 03:00 18.2  98   3.2  0.0  0.3218711</span></span>
-<span id="cb3-158"><a href="#cb3-158" tabindex="-1"></a><span class="co">#&gt; 152 2025-03-26 04:00 19.3  93   4.9  0.0  1.1623511</span></span>
-<span id="cb3-159"><a href="#cb3-159" tabindex="-1"></a><span class="co">#&gt; 153 2025-03-26 05:00 21.0  87   7.7  0.0  2.2506571</span></span>
-<span id="cb3-160"><a href="#cb3-160" tabindex="-1"></a><span class="co">#&gt; 154 2025-03-26 06:00 22.9  79   8.8  0.0  3.8421765</span></span>
-<span id="cb3-161"><a href="#cb3-161" tabindex="-1"></a><span class="co">#&gt; 155 2025-03-26 07:00 24.9  70   7.5  0.0  5.8579124</span></span>
-<span id="cb3-162"><a href="#cb3-162" tabindex="-1"></a><span class="co">#&gt; 156 2025-03-26 08:00 27.0  60   5.6  0.0  8.4408179</span></span>
-<span id="cb3-163"><a href="#cb3-163" tabindex="-1"></a><span class="co">#&gt; 157 2025-03-26 09:00 28.5  53   4.8  0.0 10.5260046</span></span>
-<span id="cb3-164"><a href="#cb3-164" tabindex="-1"></a><span class="co">#&gt; 158 2025-03-26 10:00 29.0  51   4.5  0.1 11.1780750</span></span>
-<span id="cb3-165"><a href="#cb3-165" tabindex="-1"></a><span class="co">#&gt; 159 2025-03-26 11:00 29.0  51   4.4  0.1 11.1780750</span></span>
-<span id="cb3-166"><a href="#cb3-166" tabindex="-1"></a><span class="co">#&gt; 160 2025-03-26 12:00 28.7  52   4.0  0.1 10.8449148</span></span>
-<span id="cb3-167"><a href="#cb3-167" tabindex="-1"></a><span class="co">#&gt; 161 2025-03-26 13:00 28.5  52   4.7  0.1 10.8289682</span></span>
-<span id="cb3-168"><a href="#cb3-168" tabindex="-1"></a><span class="co">#&gt; 162 2025-03-26 14:00 28.2  54   6.1  0.1 10.2054061</span></span>
-<span id="cb3-169"><a href="#cb3-169" tabindex="-1"></a><span class="co">#&gt; 163 2025-03-26 15:00 27.6  56   6.6  0.1  9.5822749</span></span>
-<span id="cb3-170"><a href="#cb3-170" tabindex="-1"></a><span class="co">#&gt; 164 2025-03-26 16:00 26.6  61   5.5  0.0  8.1518148</span></span>
-<span id="cb3-171"><a href="#cb3-171" tabindex="-1"></a><span class="co">#&gt; 165 2025-03-26 17:00 25.3  68   3.8  0.0  6.3415752</span></span>
-<span id="cb3-172"><a href="#cb3-172" tabindex="-1"></a><span class="co">#&gt; 166 2025-03-26 18:00 24.1  73   2.9  0.0  5.1510898</span></span>
-<span id="cb3-173"><a href="#cb3-173" tabindex="-1"></a><span class="co">#&gt; 167 2025-03-26 19:00 23.3  76   2.9  0.0  4.4759932</span></span>
-<span id="cb3-174"><a href="#cb3-174" tabindex="-1"></a><span class="co">#&gt; 168 2025-03-26 20:00 22.7  79   3.1  0.0  3.8363247</span></span>
-<span id="cb3-175"><a href="#cb3-175" tabindex="-1"></a><span class="co">#&gt; 169 2025-03-26 21:00 22.1  81   3.3  0.0  3.4190951</span></span>
-<span id="cb3-176"><a href="#cb3-176" tabindex="-1"></a><span class="co">#&gt; 170 2025-03-26 22:00 21.6  84   3.1  0.0  2.8246009</span></span>
-<span id="cb3-177"><a href="#cb3-177" tabindex="-1"></a><span class="co">#&gt; 171 2025-03-26 23:00 21.0  87   3.0  0.0  2.2506571</span></span>
-<span id="cb3-178"><a href="#cb3-178" tabindex="-1"></a><span class="co">#&gt; 172 2025-03-27 00:00 20.6  89   2.9  0.0  1.8802102</span></span>
-<span id="cb3-179"><a href="#cb3-179" tabindex="-1"></a><span class="co">#&gt; 173 2025-03-27 01:00 20.0  91   2.6  0.0  1.5167170</span></span>
-<span id="cb3-180"><a href="#cb3-180" tabindex="-1"></a><span class="co">#&gt; 174 2025-03-27 02:00 19.6  93   2.5  0.0  1.1650602</span></span>
-<span id="cb3-181"><a href="#cb3-181" tabindex="-1"></a><span class="co">#&gt; 175 2025-03-27 03:00 19.5  93   3.3  0.0  1.1641568</span></span>
-<span id="cb3-182"><a href="#cb3-182" tabindex="-1"></a><span class="co">#&gt; 176 2025-03-27 04:00 20.3  89   5.2  0.8  1.8758611</span></span>
-<span id="cb3-183"><a href="#cb3-183" tabindex="-1"></a><span class="co">#&gt; 177 2025-03-27 05:00 21.4  84   7.9  0.8  2.8202691</span></span>
-<span id="cb3-184"><a href="#cb3-184" tabindex="-1"></a><span class="co">#&gt; 178 2025-03-27 06:00 22.3  80  10.0  0.8  3.6233858</span></span>
-<span id="cb3-185"><a href="#cb3-185" tabindex="-1"></a><span class="co">#&gt; 179 2025-03-27 07:00 28.2  50  22.5  0.0 11.4252818</span></span>
-<span id="cb3-186"><a href="#cb3-186" tabindex="-1"></a><span class="co">#&gt; 180 2025-03-27 08:00 29.4  48  21.9  0.0 12.1742949</span></span>
-<span id="cb3-187"><a href="#cb3-187" tabindex="-1"></a><span class="co">#&gt; 181 2025-03-27 09:00 30.1  47  23.0  0.0 12.5712535</span></span>
-<span id="cb3-188"><a href="#cb3-188" tabindex="-1"></a><span class="co">#&gt; 182 2025-03-27 10:00 30.0  48  23.5  0.0 12.2277998</span></span>
-<span id="cb3-189"><a href="#cb3-189" tabindex="-1"></a><span class="co">#&gt; 183 2025-03-27 11:00 29.3  50  23.1  0.0 11.5179603</span></span>
-<span id="cb3-190"><a href="#cb3-190" tabindex="-1"></a><span class="co">#&gt; 184 2025-03-27 12:00 28.7  51  22.0  0.0 11.1534674</span></span>
-<span id="cb3-191"><a href="#cb3-191" tabindex="-1"></a><span class="co">#&gt; 185 2025-03-27 13:00 28.3  50  19.1  0.0 11.4336923</span></span>
-<span id="cb3-192"><a href="#cb3-192" tabindex="-1"></a><span class="co">#&gt; 186 2025-03-27 14:00 28.0  48  14.7  0.0 12.0498855</span></span>
-<span id="cb3-193"><a href="#cb3-193" tabindex="-1"></a><span class="co">#&gt; 187 2025-03-27 15:00 27.2  49  11.2  0.0 11.6573513</span></span>
-<span id="cb3-194"><a href="#cb3-194" tabindex="-1"></a><span class="co">#&gt; 188 2025-03-27 16:00 25.6  55   9.2  0.0  9.7234680</span></span>
-<span id="cb3-195"><a href="#cb3-195" tabindex="-1"></a><span class="co">#&gt; 189 2025-03-27 17:00 23.7  64   7.7  0.0  7.2232755</span></span>
-<span id="cb3-196"><a href="#cb3-196" tabindex="-1"></a><span class="co">#&gt; 190 2025-03-27 18:00 22.0  71   4.8  0.0  5.5075862</span></span>
-<span id="cb3-197"><a href="#cb3-197" tabindex="-1"></a><span class="co">#&gt; 191 2025-03-27 19:00 20.8  75   1.6  0.0  4.5995495</span></span>
-<span id="cb3-198"><a href="#cb3-198" tabindex="-1"></a><span class="co">#&gt; 192 2025-03-27 20:00 19.9  78   9.2  0.0  3.9546684</span></span>
-<span id="cb3-199"><a href="#cb3-199" tabindex="-1"></a><span class="co">#&gt; 193 2025-03-27 21:00 19.4  80  14.3  0.0  3.5435580</span></span>
-<span id="cb3-200"><a href="#cb3-200" tabindex="-1"></a><span class="co">#&gt; 194 2025-03-27 22:00 19.5  81  14.3  0.0  3.3514444</span></span>
-<span id="cb3-201"><a href="#cb3-201" tabindex="-1"></a><span class="co">#&gt; 195 2025-03-27 23:00 19.9  82  11.6  0.0  3.1684615</span></span>
-<span id="cb3-202"><a href="#cb3-202" tabindex="-1"></a><span class="co">#&gt; 196 2025-03-28 00:00 20.1  83   9.7  0.0  2.9817669</span></span>
-<span id="cb3-203"><a href="#cb3-203" tabindex="-1"></a><span class="co">#&gt; 197 2025-03-28 01:00 19.5  87   9.5  0.1  2.2247454</span></span>
-<span id="cb3-204"><a href="#cb3-204" tabindex="-1"></a><span class="co">#&gt; 198 2025-03-28 02:00 18.6  92   9.9  0.1  1.3273667</span></span>
-<span id="cb3-205"><a href="#cb3-205" tabindex="-1"></a><span class="co">#&gt; 199 2025-03-28 03:00 18.4  94  10.8  0.1  0.9847874</span></span>
-<span id="cb3-206"><a href="#cb3-206" tabindex="-1"></a><span class="co">#&gt; 200 2025-03-28 04:00 19.3  91  12.1  0.1  1.5085125</span></span>
-<span id="cb3-207"><a href="#cb3-207" tabindex="-1"></a><span class="co">#&gt; 201 2025-03-28 05:00 21.0  85  13.3  0.1  2.6227079</span></span>
-<span id="cb3-208"><a href="#cb3-208" tabindex="-1"></a><span class="co">#&gt; 202 2025-03-28 06:00 22.9  77  13.5  0.1  4.2533158</span></span>
-<span id="cb3-209"><a href="#cb3-209" tabindex="-1"></a><span class="co">#&gt; 203 2025-03-28 07:00 25.3  66  12.8  0.0  6.8197284</span></span>
-<span id="cb3-210"><a href="#cb3-210" tabindex="-1"></a><span class="co">#&gt; 204 2025-03-28 08:00 27.9  53  13.8  0.0 10.4795420</span></span>
-<span id="cb3-211"><a href="#cb3-211" tabindex="-1"></a><span class="co">#&gt; 205 2025-03-28 09:00 29.8  44  16.0  0.0 13.5839267</span></span>
-<span id="cb3-212"><a href="#cb3-212" tabindex="-1"></a><span class="co">#&gt; 206 2025-03-28 10:00 30.4  41  16.8  0.0 14.7523536</span></span>
-<span id="cb3-213"><a href="#cb3-213" tabindex="-1"></a><span class="co">#&gt; 207 2025-03-28 11:00 30.2  42  16.3  0.0 14.3541496</span></span>
-<span id="cb3-214"><a href="#cb3-214" tabindex="-1"></a><span class="co">#&gt; 208 2025-03-28 12:00 29.5  45  15.9  0.0 13.2015553</span></span>
-<span id="cb3-215"><a href="#cb3-215" tabindex="-1"></a><span class="co">#&gt; 209 2025-03-28 13:00 28.0  52  15.7  0.1 10.7891510</span></span>
-<span id="cb3-216"><a href="#cb3-216" tabindex="-1"></a><span class="co">#&gt; 210 2025-03-28 14:00 25.9  61  15.5  0.1  8.1093542</span></span>
-<span id="cb3-217"><a href="#cb3-217" tabindex="-1"></a><span class="co">#&gt; 211 2025-03-28 15:00 24.0  71  13.3  0.1  5.5918295</span></span>
-<span id="cb3-218"><a href="#cb3-218" tabindex="-1"></a><span class="co">#&gt; 212 2025-03-28 16:00 22.4  81  12.6  0.3  3.4269439</span></span>
-<span id="cb3-219"><a href="#cb3-219" tabindex="-1"></a><span class="co">#&gt; 213 2025-03-28 17:00 21.0  91  23.7  0.3  1.5284761</span></span>
-<span id="cb3-220"><a href="#cb3-220" tabindex="-1"></a><span class="co">#&gt; 214 2025-03-28 18:00 20.0  98  30.9  0.3  0.3264122</span></span>
-<span id="cb3-221"><a href="#cb3-221" tabindex="-1"></a><span class="co">#&gt; 215 2025-03-28 19:00 19.4 100  24.2  1.2  0.0000000</span></span>
-<span id="cb3-222"><a href="#cb3-222" tabindex="-1"></a><span class="co">#&gt; 216 2025-03-28 20:00 19.2  99  12.7  1.2  0.1614783</span></span>
-<span id="cb3-223"><a href="#cb3-223" tabindex="-1"></a><span class="co">#&gt; 217 2025-03-28 21:00 19.1  98  10.7  1.2  0.3241377</span></span>
-<span id="cb3-224"><a href="#cb3-224" tabindex="-1"></a><span class="co">#&gt; 218 2025-03-28 22:00 18.8  98  12.4  0.0  0.3233813</span></span>
-<span id="cb3-225"><a href="#cb3-225" tabindex="-1"></a><span class="co">#&gt; 219 2025-03-28 23:00 18.6  97  12.6  0.0  0.4864847</span></span>
-<span id="cb3-226"><a href="#cb3-226" tabindex="-1"></a><span class="co">#&gt; 220 2025-03-29 00:00 18.4  97  12.4  0.0  0.4857265</span></span>
-<span id="cb3-227"><a href="#cb3-227" tabindex="-1"></a><span class="co">#&gt; 221 2025-03-29 01:00 18.1  97  11.8  0.0  0.4845902</span></span>
-<span id="cb3-228"><a href="#cb3-228" tabindex="-1"></a><span class="co">#&gt; 222 2025-03-29 02:00 17.9  98  11.0  0.0  0.3211174</span></span>
-<span id="cb3-229"><a href="#cb3-229" tabindex="-1"></a><span class="co">#&gt; 223 2025-03-29 03:00 17.9  98  10.1  0.0  0.3211174</span></span>
-<span id="cb3-230"><a href="#cb3-230" tabindex="-1"></a><span class="co">#&gt; 224 2025-03-29 04:00 18.3  97  11.0  0.0  0.4853476</span></span>
-<span id="cb3-231"><a href="#cb3-231" tabindex="-1"></a><span class="co">#&gt; 225 2025-03-29 05:00 18.9  95  12.5  0.0  0.8200912</span></span>
-<span id="cb3-232"><a href="#cb3-232" tabindex="-1"></a><span class="co">#&gt; 226 2025-03-29 06:00 19.4  94  13.9  0.0  0.9924781</span></span>
-<span id="cb3-233"><a href="#cb3-233" tabindex="-1"></a><span class="co">#&gt; 227 2025-03-29 07:00 19.4  96  13.7  0.1  0.6556437</span></span>
-<span id="cb3-234"><a href="#cb3-234" tabindex="-1"></a><span class="co">#&gt; 228 2025-03-29 08:00 19.2  99  13.1  0.1  0.1614783</span></span>
-<span id="cb3-235"><a href="#cb3-235" tabindex="-1"></a><span class="co">#&gt; 229 2025-03-29 09:00 19.7  97  13.0  0.1  0.4906655</span></span>
-<span id="cb3-236"><a href="#cb3-236" tabindex="-1"></a><span class="co">#&gt; 230 2025-03-29 10:00 21.5  84  14.0  0.0  2.8224346</span></span>
-<span id="cb3-237"><a href="#cb3-237" tabindex="-1"></a><span class="co">#&gt; 231 2025-03-29 11:00 24.0  66  15.2  0.0  6.7533413</span></span>
-<span id="cb3-238"><a href="#cb3-238" tabindex="-1"></a><span class="co">#&gt; 232 2025-03-29 12:00 25.6  53  15.8  0.0 10.3023498</span></span>
-<span id="cb3-239"><a href="#cb3-239" tabindex="-1"></a><span class="co">#&gt; 233 2025-03-29 13:00 25.5  50  15.4  0.0 11.1993172</span></span>
-<span id="cb3-240"><a href="#cb3-240" tabindex="-1"></a><span class="co">#&gt; 234 2025-03-29 14:00 24.6  51  14.5  0.0 10.8197686</span></span>
-<span id="cb3-241"><a href="#cb3-241" tabindex="-1"></a><span class="co">#&gt; 235 2025-03-29 15:00 23.3  56  12.9  0.0  9.2796043</span></span>
-<span id="cb3-242"><a href="#cb3-242" tabindex="-1"></a><span class="co">#&gt; 236 2025-03-29 16:00 21.4  64  10.7  0.0  7.0984486</span></span>
-<span id="cb3-243"><a href="#cb3-243" tabindex="-1"></a><span class="co">#&gt; 237 2025-03-29 17:00 19.2  75   8.8  0.0  4.5432878</span></span>
-<span id="cb3-244"><a href="#cb3-244" tabindex="-1"></a><span class="co">#&gt; 238 2025-03-29 18:00 17.6  83   7.9  0.0  2.9245444</span></span>
-<span id="cb3-245"><a href="#cb3-245" tabindex="-1"></a><span class="co">#&gt; 239 2025-03-29 19:00 17.0  85   6.0  0.0  2.5426293</span></span>
-<span id="cb3-246"><a href="#cb3-246" tabindex="-1"></a><span class="co">#&gt; 240 2025-03-29 20:00 16.9  84   3.6  0.0  2.7236709</span></span>
-<span id="cb3-247"><a href="#cb3-247" tabindex="-1"></a></span>
-<span id="cb3-248"><a href="#cb3-248" tabindex="-1"></a><span class="co"># Retrospective analysis of application conditions</span></span>
-<span id="cb3-249"><a href="#cb3-249" tabindex="-1"></a>retrosp <span class="ot">&lt;-</span> <span class="fu">tdelta</span>(<span class="sc">-</span><span class="fl">53.6969</span>,<span class="sc">-</span><span class="fl">28.0638</span>,<span class="at">type=</span><span class="dv">2</span>,<span class="at">days=</span><span class="dv">10</span>,</span>
-<span id="cb3-250"><a href="#cb3-250" tabindex="-1"></a>                 <span class="at">dates=</span><span class="fu">c</span>(<span class="st">&quot;2023-01-01&quot;</span>,<span class="st">&quot;2023-05-01&quot;</span>),</span>
-<span id="cb3-251"><a href="#cb3-251" tabindex="-1"></a>                 <span class="at">details=</span><span class="cn">TRUE</span>)</span>
-<span id="cb3-252"><a href="#cb3-252" tabindex="-1"></a>retrosp</span>
-<span id="cb3-253"><a href="#cb3-253" tabindex="-1"></a><span class="co">#&gt; ────────────────────────────────────────────────────────────────────────────────</span></span>
-<span id="cb3-254"><a href="#cb3-254" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb3-255"><a href="#cb3-255" tabindex="-1"></a><span class="co">#&gt; ── NASA/POWER Source Native Resolution Hourly Data  ────────────────────────────</span></span>
-<span id="cb3-256"><a href="#cb3-256" tabindex="-1"></a><span class="co">#&gt; Dates (month/day/year): 01/01/2023 through 05/01/2023 in LST</span></span>
-<span id="cb3-257"><a href="#cb3-257" tabindex="-1"></a><span class="co">#&gt; Location: Latitude -28.0638 Longitude -53.6969</span></span>
-<span id="cb3-258"><a href="#cb3-258" tabindex="-1"></a><span class="co">#&gt; Elevation from MERRA-2: Average for 0.5 x 0.625 degree lat/lon region = 429.95</span></span>
-<span id="cb3-259"><a href="#cb3-259" tabindex="-1"></a><span class="co">#&gt; meters</span></span>
-<span id="cb3-260"><a href="#cb3-260" tabindex="-1"></a><span class="co">#&gt; The value for missing source data that cannot be computed or is outside of the</span></span>
-<span id="cb3-261"><a href="#cb3-261" tabindex="-1"></a><span class="co">#&gt; sources availability range: NA</span></span>
-<span id="cb3-262"><a href="#cb3-262" tabindex="-1"></a><span class="co">#&gt; Parameter(s):</span></span>
-<span id="cb3-263"><a href="#cb3-263" tabindex="-1"></a><span class="co">#&gt; ────────────────────────────────────────────────────────────────────────────────</span></span>
-<span id="cb3-264"><a href="#cb3-264" tabindex="-1"></a><span class="co">#&gt; Parameters:</span></span>
-<span id="cb3-265"><a href="#cb3-265" tabindex="-1"></a><span class="co">#&gt; T2M MERRA-2 Temperature at 2 Meters (C) ; RH2M MERRA-2 Relative Humidity at 2</span></span>
-<span id="cb3-266"><a href="#cb3-266" tabindex="-1"></a><span class="co">#&gt; Meters (%) ; PRECTOTCORR MERRA-2 Precipitation Corrected (mm/hour)</span></span>
-<span id="cb3-267"><a href="#cb3-267" tabindex="-1"></a><span class="co">#&gt; ────────────────────────────────────────────────────────────────────────────────</span></span>
-<span id="cb3-268"><a href="#cb3-268" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2,904 × 8</span></span>
-<span id="cb3-269"><a href="#cb3-269" tabindex="-1"></a><span class="co">#&gt;     YEAR    MO    DY    HR   T2M  RH2M PRECTOTCORR DELTAT</span></span>
-<span id="cb3-270"><a href="#cb3-270" tabindex="-1"></a><span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt;</span></span>
-<span id="cb3-271"><a href="#cb3-271" tabindex="-1"></a><span class="co">#&gt;  1  2023     1     1     0  21.3  78.0        0.02   4.01</span></span>
-<span id="cb3-272"><a href="#cb3-272" tabindex="-1"></a><span class="co">#&gt;  2  2023     1     1     1  21.1  79.9        0.97   3.60</span></span>
-<span id="cb3-273"><a href="#cb3-273" tabindex="-1"></a><span class="co">#&gt;  3  2023     1     1     2  21.0  81.6        2.92   3.27</span></span>
-<span id="cb3-274"><a href="#cb3-274" tabindex="-1"></a><span class="co">#&gt;  4  2023     1     1     3  21.0  82.4        2.14   3.12</span></span>
-<span id="cb3-275"><a href="#cb3-275" tabindex="-1"></a><span class="co">#&gt;  5  2023     1     1     4  21.0  83.6        1.32   2.88</span></span>
-<span id="cb3-276"><a href="#cb3-276" tabindex="-1"></a><span class="co">#&gt;  6  2023     1     1     5  22.0  80.1        0.4    3.60</span></span>
-<span id="cb3-277"><a href="#cb3-277" tabindex="-1"></a><span class="co">#&gt;  7  2023     1     1     6  23.4  75.7        0.14   4.53</span></span>
-<span id="cb3-278"><a href="#cb3-278" tabindex="-1"></a><span class="co">#&gt;  8  2023     1     1     7  25.6  67.0        1.26   6.60</span></span>
-<span id="cb3-279"><a href="#cb3-279" tabindex="-1"></a><span class="co">#&gt;  9  2023     1     1     8  28.4  56.1        3.07   9.62</span></span>
-<span id="cb3-280"><a href="#cb3-280" tabindex="-1"></a><span class="co">#&gt; 10  2023     1     1     9  31.0  48.5        2.92  12.2 </span></span>
-<span id="cb3-281"><a href="#cb3-281" tabindex="-1"></a><span class="co">#&gt; # ℹ 2,894 more rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># This function requires an internet connection to access the weather API.</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">library</span>(EstimateBreed)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># Forecasting application conditions</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>forecast <span class="ot">&lt;-</span> <span class="fu">tdelta</span>(<span class="sc">-</span><span class="fl">53.6969</span>,<span class="sc">-</span><span class="fl">28.0638</span>,<span class="at">type=</span><span class="dv">1</span>,<span class="at">days=</span><span class="dv">10</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>forecast</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co"># Retrospective analysis of application conditions</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>retrosp <span class="ot">&lt;-</span> <span class="fu">tdelta</span>(<span class="sc">-</span><span class="fl">53.6969</span>,<span class="sc">-</span><span class="fl">28.0638</span>,<span class="at">type=</span><span class="dv">2</span>,<span class="at">days=</span><span class="dv">10</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>                 <span class="at">dates=</span><span class="fu">c</span>(<span class="st">&quot;2023-01-01&quot;</span>,<span class="st">&quot;2023-05-01&quot;</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>                 <span class="at">details=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>retrosp</span></code></pre></div>
 <p>##Stress indicators from agronomic traits</p>
 <p>The <code>stind()</code> function estimates several stress indicators
 based on the productivity of a given crop subjected or not to stressful

@@ -21,18 +21,19 @@ data("pheno")
 
 with(pheno, plast(GEN,TMED,EST,NN,habit="ind",plot=TRUE))
 
-## -----------------------------------------------------------------------------
-library(EstimateBreed)
-
-# Forecasting application conditions
-forecast <- tdelta(-53.6969,-28.0638,type=1,days=10)
-forecast
-
-# Retrospective analysis of application conditions
-retrosp <- tdelta(-53.6969,-28.0638,type=2,days=10,
-                 dates=c("2023-01-01","2023-05-01"),
-                 details=TRUE)
-retrosp
+## ----eval = FALSE-------------------------------------------------------------
+# # This function requires an internet connection to access the weather API.
+# library(EstimateBreed)
+# 
+# # Forecasting application conditions
+# forecast <- tdelta(-53.6969,-28.0638,type=1,days=10)
+# forecast
+# 
+# # Retrospective analysis of application conditions
+# retrosp <- tdelta(-53.6969,-28.0638,type=2,days=10,
+#                  dates=c("2023-01-01","2023-05-01"),
+#                  details=TRUE)
+# retrosp
 
 ## -----------------------------------------------------------------------------
 library(EstimateBreed)
